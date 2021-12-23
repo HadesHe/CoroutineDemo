@@ -41,10 +41,16 @@ class WebViewManager private constructor() {
             return instance().obtain(context)
         }
 
+        /**
+         * 页面回收
+         */
         fun recycle(webView: WebView) {
             instance().recycle(webView)
         }
 
+        /**
+         * 页面销毁
+         */
         fun destroy() {
             instance().destroy()
         }
@@ -52,7 +58,7 @@ class WebViewManager private constructor() {
     private val webViewCache = ArrayList<WebView>(1)
 
     private fun obtain(context: Context): WebView {
-        if(webViewCache.isEmpty()){
+        if (webViewCache.isEmpty()) {
             webViewCache.add(create(MutableContextWrapper(context)))
         }
 
@@ -105,6 +111,15 @@ class WebViewManager private constructor() {
             setPageCacheCapacity(IX5WebSettings.DEFAULT_CACHE_CAPACITY)
         }
         return webView
+    }
+
+    private fun recycle(webView: WebView) {
+        // TODO: 2021/12/23 add recycle
+    }
+
+
+    private fun destroy(){
+        // TODO: 2021/12/23 add destroy
     }
 
 
