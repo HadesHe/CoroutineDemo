@@ -21,7 +21,7 @@ class MainApp : Application(),KoinComponent {
             androidLogger()
             androidContext(this@MainApp)
 
-            workManagerFactory()
+//            workManagerFactory()
             modules(mainModule)
         }
 
