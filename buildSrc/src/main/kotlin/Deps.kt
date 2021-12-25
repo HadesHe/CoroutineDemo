@@ -26,7 +26,10 @@ object Deps {
     }
 
     object Web {
-        //WebView
+        /**
+         * tencent x5 由于其会下发 .so 被 play 禁用
+         * 可以使用 crosswalk 替换
+         */
         const val tbs = "com.tencent.tbs.tbssdk:sdk:43993"
         const val okhttp = "com.squareup.okhttp3:okhttp:4.9.0"
         const val okhttpInterceptor = "com.squareup.okhttp3:logging-interceptor:4.9.0"
