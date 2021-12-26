@@ -23,6 +23,7 @@ object Deps {
         const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
         const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
         const val lifecycleLivedata = "androidx.lifecycle:lifecycle-livedata-ktx:2.4.0"
+        const val webkit = "androidx.webkit:webkit:1.4.0"
     }
 
     object Web {
@@ -33,6 +34,8 @@ object Deps {
         const val tbs = "com.tencent.tbs.tbssdk:sdk:43993"
         const val okhttp = "com.squareup.okhttp3:okhttp:4.9.0"
         const val okhttpInterceptor = "com.squareup.okhttp3:logging-interceptor:4.9.0"
+        const val okio = "com.squareup.okio:okio:2.10.0"
+        const val retrofit = "com.squareup.retrofit2:retrofit:2.9.0"
     }
 
     object Test {
@@ -46,6 +49,7 @@ object Deps {
 
     object Kotlinx {
         const val coroutineCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2"
+        const val coroutineCoreJvm = "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.2"
         const val coroutineAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
     }
 
