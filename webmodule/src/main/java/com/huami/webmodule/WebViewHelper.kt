@@ -144,6 +144,49 @@ class WebViewHelper private constructor(parent: ViewGroup) {
         return this
     }
 
+    fun canGoBack(): Boolean {
+        val canBack = webView.canGoBack()
+        if (canBack) webView.goBack()
+        val backForwardList = webView.copyBackForwardList()
+        val currentIndex = backForwardList.currentIndex
+        if (currentIndex == 0) {
+            val currentUrl = backForwardList.currentItem.url
+            val currentHost = Uri.parse(currentUrl).host
+            //栈底不是链接则直接返回
+            if (currentHost.isNullOrBlank()) return false
+            //栈底链接不是原始链接则直接返回
+            if (originalUrl != currentUrl) return false
+        }
+        return canBack
+    }
+
+    fun canGoForward(): Boolean {
+        val canForward = webView.canGoForward()
+        if (canForward) webView.goForward()
+        return canForward
+    }
+
+    fun loadUrl(url: String) {
+        webView.loadUrl(url)
+        originalUrl = url
+    }
+
+    fun reload() {
+        webView.reload()
+    }
+
+    fun onResume() {
+        webView.onResume()
+    }
+
+    fun onPause() {
+        webView.onPause()
+    }
+
+    fun onDestroyView() {
+        WebViewManager.recycle(webView)
+    }
+
     private fun assetsResourceRequest(
         context: Context,
         webRequest: WebResourceRequest
