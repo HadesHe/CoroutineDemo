@@ -26,6 +26,9 @@ android {
     kotlinOptions {
         jvmTarget = Deps.Versions.javaVersion.toString()
     }
+//    viewBinding {
+//        enabled= true
+//    }
 }
 
 dependencies {
@@ -39,6 +42,8 @@ dependencies {
     implementation(Deps.Web.retrofit)
     implementation(Deps.Kotlinx.coroutineCoreJvm)
     implementation(Deps.AndroidX.webkit)
+    implementation(Deps.AndroidX.fragment)
+    implementation(Deps.AndroidX.fragmentktx)
     testImplementation(Deps.Test.junit)
     androidTestImplementation(Deps.AndroidTest.junit)
     androidTestImplementation(Deps.AndroidTest.espresso)

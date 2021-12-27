@@ -24,6 +24,8 @@ object Deps {
         const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
         const val lifecycleLivedata = "androidx.lifecycle:lifecycle-livedata-ktx:2.4.0"
         const val webkit = "androidx.webkit:webkit:1.4.0"
+        const val fragmentktx = "androidx.fragment:fragment-ktx:1.4.0"
+        const val fragment = "androidx.fragment:fragment:1.4.0"
     }
 
     object Web {
