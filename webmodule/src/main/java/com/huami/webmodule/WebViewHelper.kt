@@ -139,6 +139,11 @@ class WebViewHelper private constructor(parent: ViewGroup) {
         }
     }
 
+    fun injectVConsole(inject: Boolean): WebViewHelper {
+        injectVConsole = inject
+        return this
+    }
+
     fun setOnPageChangedListener(onPageChangedListener: OnPageChangedListener?): WebViewHelper {
         this.onPageChangedListener = onPageChangedListener
         return this

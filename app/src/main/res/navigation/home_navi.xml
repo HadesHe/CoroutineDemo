@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_navi.xml"
-    app:startDestination="@id/mainFragment"
-    >
+    app:startDestination="@id/mainFragment">
 
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.huami.coroutinedemo.MainFragment"
+        tools:layout="@layout/main_fragment"
         >
         <action
             android:id="@+id/main_to_web"
@@ -18,5 +19,6 @@
     <fragment
         android:id="@+id/webFragment"
         android:name="com.huami.webmodule.WebFragment"
+        tools:layout="@layout/fragment_web"
         />
 </navigation>

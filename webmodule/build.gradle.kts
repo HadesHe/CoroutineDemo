@@ -47,4 +47,5 @@ dependencies {
     testImplementation(Deps.Test.junit)
     androidTestImplementation(Deps.AndroidTest.junit)
     androidTestImplementation(Deps.AndroidTest.espresso)
+    implementation(Deps.AndroidX.activityKtx)
 }

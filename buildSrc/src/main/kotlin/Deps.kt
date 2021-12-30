@@ -30,6 +30,7 @@ object Deps {
         const val navigationKtx = "androidx.navigation:navigation-fragment-ktx:2.3.5"
         const val navigationUIKtx = "androidx.navigation:navigation-ui-ktx:2.3.5"
         const val navigationSafeArg = "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5"
+        const val activityKtx = "androidx.activity:activity-ktx:1.4.0"
     }
 
     object Web {
