@@ -12,6 +12,15 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+
+        var a = 23
+        val user = User("Nmae",123f)
+        a++
+
     }
 }
+
+data class User(
+    val name: String,
+    val weight: Float
+)
