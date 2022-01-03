@@ -56,17 +56,6 @@ class WebFragment : Fragment(R.layout.fragment_web) {
             }
         }
 
-//        val onBackPressed =
-//            requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,
-//                object : OnBackPressedCallback(true) {
-//                    override fun handleOnBackPressed() {
-//                        if (!webViewHelper.canGoBack()) {
-//                            this.isEnabled = false
-//                            requireActivity().onBackPressed()
-//                        }
-//                    }
-//
-//                })
 
         backBtn?.setOnClickListener {
             if(!webViewHelper.canGoBack()){
@@ -74,6 +63,16 @@ class WebFragment : Fragment(R.layout.fragment_web) {
                 requireActivity().onBackPressed()
             }
         }
+
+        forwardBtn?.setOnClickListener {
+            webViewHelper.canGoForward()
+        }
+
+        refreshBtn?.setOnClickListener {
+            webViewHelper.reload()
+        }
+
+
     }
 
 
