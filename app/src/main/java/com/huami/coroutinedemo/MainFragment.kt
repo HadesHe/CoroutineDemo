@@ -1,13 +1,11 @@
 package com.huami.coroutinedemo
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatButton
 import androidx.navigation.fragment.findNavController
+import com.huami.webmodule.WebFragment
 
 class MainFragment : Fragment(R.layout.main_fragment) {
 
@@ -16,7 +14,9 @@ class MainFragment : Fragment(R.layout.main_fragment) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<AppCompatButton>(R.id.btnWeb).setOnClickListener {
 
-            findNavController().navigate(R.id.webFragment)
+            val args = Bundle()
+            args.putString(WebFragment.WEB_FRAGMENR_URL,"https://www.baidu.com/")
+            findNavController().navigate(R.id.webFragment,args)
         }
     }
 
