@@ -15,6 +15,9 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary = true
+        }
     }
 
     buildTypes {
@@ -32,6 +35,18 @@ android {
     }
     kotlinOptions {
         jvmTarget = Deps.Versions.javaVersion.toString()
+        useIR = true
+    }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = Deps.Versions.composeVersion
+    }
+    packagingOptions {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
     }
 
     android {
@@ -55,6 +70,10 @@ dependencies {
     implementation(Deps.AndroidX.navigationUIKtx)
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
     implementation(project(mapOf("path" to ":webmodule")))
+    implementation(Deps.Compose.ui)
+    implementation(Deps.Compose.material)
+    implementation(Deps.Compose.uiPreview)
+    implementation(Deps.Compose.activityCompose)
     testImplementation(Deps.Test.junit)
     androidTestImplementation(Deps.AndroidTest.junit)
     androidTestImplementation(Deps.AndroidTest.espresso)

@@ -12,6 +12,7 @@ object Deps {
         const val minSdk = 21
         const val targetSdk = compileSdk
         val javaVersion = JavaVersion.VERSION_11
+        val composeVersion  = "1.0.1"
     }
 
     object AndroidX {
@@ -63,5 +64,12 @@ object Deps {
     object Koin {
         const val koin = "io.insert-koin:koin-core:3.1.4"
         const val koinAndroid = "io.insert-koin:koin-android:3.1.4"
+    }
+
+    object Compose{
+        val ui = "androidx.compose.ui:ui:${Versions.composeVersion}"
+        val material = "androidx.compose.material:material:${Versions.composeVersion}"
+        val uiPreview = "androidx.compose.ui:ui-tooling-preview:${Versions.composeVersion}"
+        const val activityCompose = "androidx.activity:activity-compose:1.4.0"
     }
 }

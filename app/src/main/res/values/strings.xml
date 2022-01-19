@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CoroutineDemo</string>
+    <string name="title_activity_componse">ComponseActivity</string>
 </resources>
