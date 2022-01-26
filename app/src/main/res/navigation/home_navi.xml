@@ -19,6 +19,11 @@
             android:id="@+id/main_to_compose"
             app:destination="@id/composeFragment"
             />
+
+        <action
+            android:id="@+id/main_to_flow"
+            app:destination="@id/flowFragment"
+            />
     </fragment>
 
     <fragment
@@ -30,5 +35,10 @@
     <fragment
         android:id="@+id/composeFragment"
         android:name="com.huami.coroutinedemo.componse.ComposeFragment"
+        />
+
+    <fragment
+        android:id="@+id/flowFragment"
+        android:name="com.huami.coroutinedemo.flow.FlowFragment"
         />
 </navigation>

@@ -1,6 +1,7 @@
 package com.huami.coroutinedemo.di
 
 import com.huami.coroutinedemo.MainViewModel
+import com.huami.coroutinedemo.flow.FlowViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -13,5 +14,9 @@ val mainModule = module {
 
     viewModel {
         MainViewModel()
+    }
+
+    viewModel {
+        FlowViewModel()
     }
 }
