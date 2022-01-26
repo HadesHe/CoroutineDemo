@@ -14,11 +14,21 @@
             android:id="@+id/main_to_web"
             app:destination="@id/webFragment"
             />
+
+        <action
+            android:id="@+id/main_to_compose"
+            app:destination="@id/composeFragment"
+            />
     </fragment>
 
     <fragment
         android:id="@+id/webFragment"
         android:name="com.huami.webmodule.WebFragment"
         tools:layout="@layout/fragment_web"
+        />
+
+    <fragment
+        android:id="@+id/composeFragment"
+        android:name="com.huami.coroutinedemo.componse.ComposeFragment"
         />
 </navigation>

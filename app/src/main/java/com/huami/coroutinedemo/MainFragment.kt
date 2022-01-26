@@ -68,6 +68,10 @@ class MainFragment : Fragment(R.layout.main_fragment) {
         view.findViewById<AppCompatButton>(R.id.btnCancle).setOnClickListener {
             job?.cancel()
         }
+
+        view.findViewById<AppCompatButton>(R.id.btnCompose).setOnClickListener {
+            findNavController().navigate(R.id.composeFragment)
+        }
     }
 
     fun simple(): Flow<Int> = flow {

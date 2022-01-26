@@ -25,4 +25,13 @@
         android:text="JobCancel"
         android:textAllCaps="false"
         />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCompose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnCancle"
+        android:text="Compose"
+        android:textAllCaps="false"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
