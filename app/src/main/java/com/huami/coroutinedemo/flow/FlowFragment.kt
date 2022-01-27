@@ -27,7 +27,7 @@ class FlowFragment : Fragment(R.layout.flow_fragment) {
             flowViewModel.onClick(System.currentTimeMillis())
         }
 
-        flowViewModel.resultFlow.observe(this){
+        flowViewModel.resultFlow.observe(viewLifecycleOwner){
             Log.d("flowFragment","reuslt $it")
         }
 
