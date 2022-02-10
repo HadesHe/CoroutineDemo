@@ -12,8 +12,10 @@ object Deps {
         const val minSdk = 21
         const val targetSdk = compileSdk
         val javaVersion = JavaVersion.VERSION_11
-        val composeVersion  = "1.0.5"
+        val composeVersion = "1.0.5"
         const val kotlinVersion = "1.5.31"
+
+        const val work_version = "2.7.1"
     }
 
     object AndroidX {
@@ -33,6 +35,9 @@ object Deps {
         const val navigationUIKtx = "androidx.navigation:navigation-ui-ktx:2.3.5"
         const val navigationSafeArg = "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5"
         const val activityKtx = "androidx.activity:activity-ktx:1.4.0"
+
+        const val workerManagerKtx = "androidx.work:work-runtime-ktx:${Versions.work_version}"
+        const val workerManagerMulti = "androidx.work:work-multiprocess:${Versions.work_version}"
     }
 
     object Web {
@@ -67,7 +72,7 @@ object Deps {
         const val koinAndroid = "io.insert-koin:koin-android:3.1.4"
     }
 
-    object Compose{
+    object Compose {
         val ui = "androidx.compose.ui:ui:${Versions.composeVersion}"
         val material = "androidx.compose.material:material:${Versions.composeVersion}"
         val uiPreview = "androidx.compose.ui:ui-tooling-preview:1.0.5"
