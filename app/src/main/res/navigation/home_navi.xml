@@ -24,6 +24,10 @@
             android:id="@+id/main_to_flow"
             app:destination="@id/flowFragment"
             />
+        <action
+            android:id="@+id/main_to_worker"
+            app:destination="@id/workerFragment"
+            />
     </fragment>
 
     <fragment
@@ -40,5 +44,10 @@
     <fragment
         android:id="@+id/flowFragment"
         android:name="com.huami.coroutinedemo.flow.FlowFragment"
+        />
+
+    <fragment
+        android:id="@+id/workerFragment"
+        android:name="com.huami.coroutinedemo.worker.WorkerFragment"
         />
 </navigation>

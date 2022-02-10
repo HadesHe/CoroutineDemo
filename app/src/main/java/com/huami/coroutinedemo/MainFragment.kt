@@ -76,6 +76,10 @@ class MainFragment : Fragment(R.layout.main_fragment) {
         view.findViewById<AppCompatButton>(R.id.btnFlowPractise).setOnClickListener {
             findNavController().navigate(R.id.flowFragment)
         }
+
+        view.findViewById<AppCompatButton>(R.id.btnWorkManager).setOnClickListener {
+            findNavController().navigate(R.id.workerFragment)
+        }
     }
 
     fun simple(): Flow<Int> = flow {

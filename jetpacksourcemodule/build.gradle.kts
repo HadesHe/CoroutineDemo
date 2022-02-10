@@ -37,4 +37,7 @@ dependencies {
     testImplementation(Deps.Test.junit)
 
     implementation(Deps.AndroidX.workerManagerKtx)
+
+    implementation(Deps.Koin.koin)
+    implementation(Deps.Koin.koinAndroid)
 }
