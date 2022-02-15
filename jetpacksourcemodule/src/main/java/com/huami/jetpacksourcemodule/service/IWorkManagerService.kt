@@ -1,11 +1,15 @@
 package com.huami.jetpacksourcemodule.service
 
 import android.content.Context
+import androidx.lifecycle.LiveData
 import androidx.work.Constraints
 import androidx.work.NetworkType
 import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.PeriodicWorkRequestBuilder
+import androidx.work.WorkInfo
 import androidx.work.WorkManager
 import com.huami.jetpacksourcemodule.UploadWork
+import java.util.concurrent.TimeUnit
 
 /**
  * @date 2022/2/10
@@ -14,22 +18,28 @@ import com.huami.jetpacksourcemodule.UploadWork
  */
 interface IWorkManagerService {
 
+    //    1. 一次性任务
     fun oneTimeWork()
 
-    fun oneTimeConstraintWork()
-
+    //   2. 周期性任务
     fun repeatTimeWork()
 
-    fun repeatTimeConstraintWork()
+    //   3. 约束条件任务
+    fun oneTimeConstraintWork()
+
+    //    4. 延迟任务
+    fun delayWork()
+
+    fun getWorkInfoById(): LiveData<WorkInfo>
 }
 
 
 class WorkManagerServiceImpl(private val context: Context) : IWorkManagerService {
 
+    val oneTimeWork = OneTimeWorkRequestBuilder<UploadWork>().build()
     override fun oneTimeWork() {
-        val uploadWork = OneTimeWorkRequestBuilder<UploadWork>().build()
         WorkManager.getInstance(context)
-            .enqueue(uploadWork)
+            .enqueue(oneTimeWork)
     }
 
     override fun oneTimeConstraintWork() {
@@ -41,9 +51,21 @@ class WorkManagerServiceImpl(private val context: Context) : IWorkManagerService
             .enqueue(uploadWork)
     }
 
-    override fun repeatTimeWork() {
+    override fun delayWork() {
+        val uploadWorkRequest = OneTimeWorkRequestBuilder<UploadWork>()
+            .setInitialDelay(10,TimeUnit.SECONDS)
+            .build()
+        WorkManager.getInstance(context).enqueue(uploadWorkRequest)
     }
 
-    override fun repeatTimeConstraintWork() {
+    override fun getWorkInfoById(): LiveData<WorkInfo> {
+        return WorkManager.getInstance(context).getWorkInfoByIdLiveData(
+            oneTimeWork.id
+        )
+    }
+
+    override fun repeatTimeWork() {
+        val uploadWork = PeriodicWorkRequestBuilder<UploadWork>(12, TimeUnit.HOURS).build()
+        WorkManager.getInstance(context).enqueue(uploadWork)
     }
 }
