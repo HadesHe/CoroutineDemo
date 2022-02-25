@@ -13,3 +13,6 @@
 - 用户无感知或可延迟感知的任务
 2. 定期重复性任务，但对时效性要求不高的
 3. 退出应用后还应继续执行的未完成任务
+
+## WorkManager 初始化
+- 使用 WorkManagerInitializer 这个 ContentProvider 进行初始化
