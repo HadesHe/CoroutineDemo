@@ -1,11 +1,35 @@
-<mxfile host="app.diagrams.net" modified="2022-02-25T11:43:05.269Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36" etag="dhYoAyDRxpCQ8XjaDsTv" version="16.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-25T11:53:11.611Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36" etag="4deRe4IFa2jlV7JuidYF" version="16.5.5" type="github">
   <diagram id="CxMmpx083xP23x3jhyUz" name="Page-1">
     <mxGraphModel dx="1406" dy="671" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="PezGvLSJAi8ec4N1YCi6-1" value="Entity" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
-          <mxGeometry x="140" y="140" width="100" height="40" as="geometry" />
+        <mxCell id="PezGvLSJAi8ec4N1YCi6-3" value="WorkManager" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="130" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="PezGvLSJAi8ec4N1YCi6-4" value="WorkManagerImpl" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="145" y="240" width="140" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="PezGvLSJAi8ec4N1YCi6-5" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="PezGvLSJAi8ec4N1YCi6-4">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="PezGvLSJAi8ec4N1YCi6-6" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="PezGvLSJAi8ec4N1YCi6-4">
+          <mxGeometry y="52" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="PezGvLSJAi8ec4N1YCi6-7" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="PezGvLSJAi8ec4N1YCi6-4">
+          <mxGeometry y="78" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="PezGvLSJAi8ec4N1YCi6-8" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="PezGvLSJAi8ec4N1YCi6-3" target="PezGvLSJAi8ec4N1YCi6-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="480" as="sourcePoint" />
+            <mxPoint x="300" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PezGvLSJAi8ec4N1YCi6-9" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="PezGvLSJAi8ec4N1YCi6-8">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PezGvLSJAi8ec4N1YCi6-10" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="PezGvLSJAi8ec4N1YCi6-8">
+          <mxGeometry x="1" relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
