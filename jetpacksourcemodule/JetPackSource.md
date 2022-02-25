@@ -4,6 +4,7 @@
 ## WorkManager 源码分析
 - [WorkManager源码分析](https://mp.weixin.qq.com/s/9vTSqUXB9esDRAikWoMnwg)
 - [百度脑图地址](https://naotu.baidu.com/home/af9a29a83b0d410ea9f7a18aaea520d6)
+- [在线 UML 图地址](https://app.diagrams.net/#HHadesHe%2FCoroutineDemo%2Fmaster%2Fjetpacksourcemodule%2FUntitled%20Diagram.drawio)
 ### 特点
 1. 任务一定会被执行，使用本地数据库，记录任务信息及任务状态，以确保在设备重启的情况下，依旧可以执行
 2. 合理使用设备资源
