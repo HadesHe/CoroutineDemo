@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-02-28T12:02:33.495Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.109 Safari/537.36" etag="-ErbmBhVmDkL17jvXNss" version="16.6.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-28T12:02:55.549Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.109 Safari/537.36" etag="jEwpEhdJFAfw-JAAUeK_" version="16.6.4" type="github">
   <diagram id="CxMmpx083xP23x3jhyUz" name="Page-1">
     <mxGraphModel dx="1426" dy="691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -59,12 +59,6 @@
         </mxCell>
         <mxCell id="7d2k9NrPQv5SFi6ZcN7--19" value="前置条件=NONE使用GreedyScheduler执行" style="shape=note;size=20;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="450" y="190" width="100" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="7d2k9NrPQv5SFi6ZcN7--20" value="dispatch" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1">
-          <mxGeometry width="80" relative="1" as="geometry">
-            <mxPoint x="840" y="470" as="sourcePoint" />
-            <mxPoint x="920" y="470" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="7d2k9NrPQv5SFi6ZcN7--21" value="dispatch" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1">
           <mxGeometry width="80" relative="1" as="geometry">
