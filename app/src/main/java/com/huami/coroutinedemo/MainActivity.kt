@@ -2,19 +2,10 @@ package com.huami.coroutinedemo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.lifecycleScope
-import com.huami.coroutinedemo.ext.commonLog
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import okhttp3.Call
-import okhttp3.Callback
-import okhttp3.OkHttpClient
-import okhttp3.Request
-import okhttp3.Response
-import java.io.IOException
+import com.huami.coroutinedemo.lazyinterface.ILifecycleDelegate
+import com.huami.coroutinedemo.lazyinterface.LogLifecycleDelegate
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), ILifecycleDelegate by LogLifecycleDelegate() {
 //    val client by lazy {
 //        OkHttpClient.Builder().addInterceptor(LogIntercept()).build()
 //    }
@@ -22,6 +13,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        registerDelegate(this)
 
 //        lifecycleScope.launch(Dispatchers.IO) {
 //
