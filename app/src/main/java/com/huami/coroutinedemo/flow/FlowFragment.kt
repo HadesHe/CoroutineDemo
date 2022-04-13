@@ -6,9 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import com.huami.coroutinedemo.R
+import com.huami.coroutinedemo.lazyinterface.FlowLifecycleDelegate
+import com.huami.coroutinedemo.lazyinterface.ICoroutineScopeDelegate
 
-class FlowFragment : Fragment(R.layout.flow_fragment) {
+class FlowFragment : Fragment(R.layout.flow_fragment), ICoroutineScopeDelegate by FlowLifecycleDelegate()  {
 
     companion object {
         fun newInstance() = FlowFragment()
@@ -19,6 +22,9 @@ class FlowFragment : Fragment(R.layout.flow_fragment) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        registerCoroutineScope(this.viewLifecycleOwner, lifecycleScope)
+
 
         btnFlowClick = view.findViewById<AppCompatButton>(R.id.btnFlowClick)
 
