@@ -16,3 +16,4 @@ rootProject.name = "CoroutineDemo"
 include(":app")
 include(":webmodule")
 include(":jetpacksourcemodule")
+include(":viewbinding")
