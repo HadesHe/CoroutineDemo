@@ -38,6 +38,9 @@ object Deps {
 
         const val workerManagerKtx = "androidx.work:work-runtime-ktx:${Versions.work_version}"
         const val workerManagerMulti = "androidx.work:work-multiprocess:${Versions.work_version}"
+        const val dataStore = "androidx.datastore:datastore:1.0.0"
+        const val dataStorePref = "androidx.datastore:datastore-preferences:1.0.0"
+        const val viewBinding = "androidx.databinding:viewbinding:7.1.3"
     }
 
     object Web {
