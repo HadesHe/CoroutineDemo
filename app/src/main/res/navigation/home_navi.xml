@@ -28,6 +28,9 @@
             android:id="@+id/main_to_worker"
             app:destination="@id/workerFragment"
             />
+        <action
+            android:id="@+id/main_to_datastore"
+            app:destination="@+id/dataStoreFragment"/>
     </fragment>
 
     <fragment
@@ -50,4 +53,7 @@
         android:id="@+id/workerFragment"
         android:name="com.huami.coroutinedemo.worker.WorkerFragment"
         />
+    <fragment
+        android:id="@+id/dataStoreFragment"
+        android:name="com.huami.coroutinedemo.datastore.DataStoreFragment"/>
 </navigation>
